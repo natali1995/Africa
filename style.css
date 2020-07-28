@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* General styles */
+h1 {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 40px;
+}
+
+p {
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 28px;
+}
+
+/* Style for Section Home */
+#home {
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.mobile {
+  padding-right: 3%;
+  padding-top: 40px;
+  display: grid;
+}
+
+.address-header-p1, .address-header-p2, .phone-header-p1, .phone-header-p2, .e-mail-header-p1, .e-mail-header-p2 {
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 20px;
+}
+
+.address-header-p1, .phone-header-p2, .e-mail-header-p1 {
+  color: #000000;
+}
+
+.address-header-p2, .phone-header-p1, .e-mail-header-p2 {
+  color: #fbd850;
+}
+
+.logo {
+  height: 200%;
+}
+
+/*Style position for header */
+.header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding-left: 3%;
+}
+
+.information {
+  display: grid;
+  grid-template-areas: "header-address-p1 header-phone-p1 header-email-p1" "header-address-p2 header-phone-p2 header-email-p2";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70px 70px;
+}
+
+.address-header-p1 {
+  grid-area: header-address-p1;
+}
+
+.address-header-p2 {
+  grid-area: header-address-p2;
+}
+
+.phone-header-p1 {
+  grid-area: header-phone-p1;
+}
+
+.phone-header-p2 {
+  grid-area: header-phone-p2;
+}
+
+.e-mail-header-p1 {
+  grid-area: header-email-p1;
+}
+
+.e-mail-header-p2 {
+  grid-area: header-email-p2;
+}
+
+#navigation.fixed {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 150px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/* menu */
+ul {
+  transform: translate(0%, 0%);
+  padding: 0;
+  display: inline-grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 5%;
+  justify-self: center;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+}
+
+ul li a {
+  position: relative;
+  width: 120%;
+  color: #fbd850;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 48px;
+  line-height: 80px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+
+.black-menu {
+  color: #000000;
+}
+
+ul li a span {
+  position: absolute;
+  width: 25%;
+  height: 130%;
+  background-color: #000000;
+  z-index: -1;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.5s;
+}
+
+.black-menu span {
+  background-color: #fbd850;
+}
+
+ul li a:hover {
+  color: #fbd850;
+  text-decoration: none;
+}
+
+.black-menu:hover {
+  color: #000000;
+}
+
+ul li a:hover span {
+  transform-origin: bottom;
+  transform: scaleY(1);
+}
+
+ul li a span:nth-child(1) {
+  left: 0;
+  transition-delay: 0s;
+}
+
+ul li a span:nth-child(2) {
+  left: 25%;
+  transition-delay: 0.15s;
+}
+
+ul li a span:nth-child(3) {
+  left: 50%;
+  transition-delay: 0.3s;
+}
+
+ul li a span:nth-child(4) {
+  left: 75%;
+  transition-delay: 0.45s;
+}
+
+/* for button */
+.fancy-btn {
+  display: inline-block;
+  position: absolute;
+  padding: 15px 30px;
+  border: 2px solid #fbd850;
+  border-radius: 15px;
+  color: #000000;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 48px;
+  text-decoration: none;
+  margin-top: 200px;
+  margin-left: 20%;
+  transition: color 0.4s;
+}
+
+.button2 {
+  color: #fbd850;
+  border: 2px solid #000000;
+  margin-top: 200px;
+  margin-left: 50%;
+}
+
+.fancy-btn:after {
+  content: " ";
+  border: 2px solid rgba(0, 0, 0, 0);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.4s;
+}
+
+.fancy-btn:hover {
+  color: #000000;
+}
+
+.button2:hover {
+  color: #fbd850;
+}
+
+.fancy-btn:hover:after {
+  border: 2px solid #fbd850;
+  border-radius: 15px;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px);
+}
+
+.button2:hover:after {
+  border: 2px solid #000000;
+}
+
+/* Style for section Places */
+#places {
+  background-color: #000000;
+  padding: 100px 10% 100px 10%;
+}
+
+.heading-place {
+  text-align: center;
+  color: #fbd850;
+}
+
+.place1 p, .place1 h2, .place2 p, .place2 h2, .place3 p, .place3 h2, .place4 p, .place4 h2 {
+  color: #fbd850;
+}
+
+.place1 {
+  display: grid;
+  grid-template-areas: "img-victoria heading-vicroria" "img-victoria description-victoria";
+  grid-template-columns: 3fr 2fr;
+  grid-column-gap: 3%;
+  grid-row-gap: 30px;
+  margin-top: 120px;
+}
+
+.place1 img {
+  grid-area: img-victoria;
+  width: 100%;
+}
+
+.place1 h2 {
+  grid-area: heading-vicroria;
+  text-align: center;
+}
+
+.place1 p {
+  grid-area: description-victoria;
+}
+
+.place2 {
+  display: grid;
+  grid-template-areas: "heading-place2 img-place2" "description-place2 img-place2";
+  grid-template-columns: 2fr 3fr;
+  grid-column-gap: 3%;
+  grid-row-gap: 30px;
+  margin-top: 150px;
+}
+
+.place2 h2 {
+  grid-area: heading-place2;
+  text-align: center;
+}
+
+.place2 p {
+  grid-area: description-place2;
+}
+
+.place2 img {
+  grid-area: img-place2;
+  width: 100%;
+}
+
+.place3 {
+  display: grid;
+  grid-template-areas: "img-place3 heading-place3" "img-place3 description-place3";
+  grid-template-columns: 3fr 2fr;
+  grid-column-gap: 3%;
+  grid-row-gap: 30px;
+  margin-top: 150px;
+}
+
+.place3 img {
+  grid-area: img-place3;
+  width: 100%;
+}
+
+.place3 h2 {
+  grid-area: heading-place3;
+  text-align: center;
+}
+
+.place3 p {
+  grid-area: description-place3;
+}
+
+.place4 {
+  display: grid;
+  grid-template-areas: "heading-place4 img-place4" "description-place4 img-place4";
+  grid-template-columns: 2fr 3fr;
+  grid-column-gap: 3%;
+  grid-row-gap: 30px;
+  margin-top: 150px;
+}
+
+.place4 h2 {
+  grid-area: heading-place4;
+  text-align: center;
+}
+
+.place4 p {
+  grid-area: description-place4;
+}
+
+.place4 img {
+  grid-area: img-place4;
+  width: 100%;
+}
+
+/* Style for section animals */
+#animals {
+  background-color: #fbd850;
+  padding: 100px 10% 100px 10%;
+}
+
+#animals h1 {
+  text-align: center;
+}
+
+.description-animal {
+  display: grid;
+  grid-template-areas: "description-animals img-animals";
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 1%;
+  margin-top: 100px;
+}
+
+.description-animal p {
+  grid-area: description-animals;
+  align-self: center;
+}
+
+.description-animal img {
+  grid-area: img-animals;
+  width: 100%;
+}
+
+.images-animals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 200px;
+}
+
+.images-animals img {
+  width: 100%;
+}
+
+/* Style for section Activity */
+#activity {
+  background-color: #000000;
+  padding: 100px 10% 100px 10%;
+}
+
+#activity h1, #activity p, #activity h2 {
+  color: #fbd850;
+}
+
+#activity h1 {
+  text-align: center;
+}
+
+.description-activity {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#activity h2 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.activity1 {
+  display: grid;
+  grid-template-areas: "img-activity1 description-activity1";
+  grid-template-columns: 3fr 2fr;
+  grid-column-gap: 2%;
+  margin-top: 100px;
+}
+
+.activity1 img {
+  grid-area: img-activity1;
+  align-self: center;
+  width: 100%;
+}
+
+.activity1 p {
+  grid-area: description-activity1;
+  align-self: center;
+}
+
+.activity2 {
+  display: grid;
+  grid-template-areas: "description-activity2 img-activity2";
+  grid-template-columns: 2fr 3fr;
+  grid-column-gap: 2%;
+  margin-top: 100px;
+}
+
+.activity2 img {
+  grid-area: img-activity2;
+  align-self: center;
+  width: 100%;
+}
+
+.activity2 p {
+  grid-area: description-activity2;
+  align-self: center;
+}
+
+/* Style for section culture */
+#culture {
+  background-color: #fbd850;
+  padding: 100px 5% 100px 5%;
+  display: grid;
+}
+
+#culture h1 {
+  text-align: center;
+}
+
+.img-culture {
+  justify-self: center;
+  margin-top: 50px;
+  width: 80%;
+}
+
+.description-culture {
+  margin-top: 50px;
+  width: 80%;
+  text-align: center;
+  justify-self: center;
+}
+
+.about-culture1 {
+  margin-top: 100px;
+}
+
+.img-culture1 {
+  float: right;
+  width: 55%;
+  text-align: right;
+}
+
+.about-culture1 img {
+  width: 96%;
+  margin-top: 20px;
+}
+
+.description-culture1 {
+  text-align: justify;
+}
+
+.about-culture2 {
+  margin-top: 40px;
+}
+
+.img-about-culture2 {
+  float: left;
+  width: 55%;
+}
+
+.about-culture2 img {
+  width: 96%;
+}
+
+.description-culture2 {
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */
