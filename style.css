@@ -180,9 +180,16 @@ ul li a span:nth-child(4) {
 }
 
 /* for button */
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2%;
+  margin-top: 100px;
+}
+
 .fancy-btn {
   display: inline-block;
-  position: absolute;
+  position: relative;
   padding: 15px 30px;
   border: 2px solid #fbd850;
   border-radius: 15px;
@@ -190,16 +197,14 @@ ul li a span:nth-child(4) {
   font-family: "Berkshire Swash", cursive;
   font-size: 48px;
   text-decoration: none;
-  margin-top: 200px;
-  margin-left: 20%;
   transition: color 0.4s;
+  justify-self: end;
 }
 
 .button2 {
   color: #fbd850;
   border: 2px solid #000000;
-  margin-top: 200px;
-  margin-left: 50%;
+  justify-self: start;
 }
 
 .fancy-btn:after {
@@ -501,6 +506,140 @@ ul li a span:nth-child(4) {
 
 .description-culture2 {
   text-align: justify;
+}
+
+/*Style for section bk-footer */
+#bk-footer {
+  background-image: url("img/bk-footer.jpg");
+  background-size: cover;
+  height: 800px;
+  display: grid;
+}
+
+#bk-footer a {
+  justify-self: center;
+  height: 70px;
+  margin-top: 250px;
+}
+
+/* Style for footer */
+#contacts-footer {
+  background-color: #000000;
+  padding: 0 5% 10px 5%;
+  display: grid;
+}
+
+#contacts-footer p, #contacts-footer i {
+  color: #fbd850;
+}
+
+.call i {
+  font-size: 40px;
+}
+
+.join i {
+  font-size: 28px;
+}
+
+.contact-information input {
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fbd850;
+  color: #fbd850;
+  padding: 2px 10px;
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 20px;
+}
+
+input::-webkit-input-placeholder {
+  color: #fbd850;
+  opacity: 0.5;
+}
+
+.send-button i {
+  font-size: 28px;
+  margin-left: 10%;
+}
+
+.send-button {
+  text-decoration: none;
+  color: #fbd850;
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 28px;
+  border: 2px solid #fbd850;
+  padding: 2px 10px;
+  width: 120px;
+  justify-self: center;
+  margin-top: 50px;
+}
+
+.general-information {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+}
+
+.address, .phone, .e-mail {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.call {
+  display: inline-grid;
+  grid-template-columns: 1fr 12fr;
+  grid-column-gap: 4%;
+  justify-self: center;
+  margin-top: 100px;
+  margin-left: 15%;
+}
+
+.call p {
+  align-self: center;
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+
+.contact-information {
+  justify-self: center;
+  display: grid;
+}
+
+.heading-contacts {
+  text-align: center;
+}
+
+.blocks {
+  display: inline-grid;
+  grid-template-columns: 2fr 3fr;
+  margin-top: 50px;
+  padding-left: 10%;
+}
+
+.join {
+  justify-self: center;
+  display: grid;
+}
+
+.heading-join {
+  justify-self: center;
+}
+
+.join div {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  grid-column-gap: 2%;
+  margin-top: 30px;
+}
+
+.copyright {
+  margin-top: 50px;
+}
+
+.copyright p {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -160,9 +160,15 @@ ul li a span:nth-child(4)
 
 
 /* for button */
+.buttons
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 2%
+  margin-top: 100px
+
 .fancy-btn
   display: inline-block
-  position: absolute
+  position: relative
   padding: 15px 30px
   border: 2px solid $color2
   border-radius: 15px
@@ -170,15 +176,13 @@ ul li a span:nth-child(4)
   font-family: $font-family2
   font-size: $font-size-h1
   text-decoration: none
-  margin-top: 200px
-  margin-left: 20%
   transition: color 0.4s
+  justify-self: end
 
 .button2
   color: $color2
   border: 2px solid $color1
-  margin-top: 200px
-  margin-left: 50%
+  justify-self: start
 
 .fancy-btn:after
   content: " "
@@ -430,7 +434,117 @@ ul li a span:nth-child(4)
 .description-culture2
   text-align: justify
 
+/*Style for section bk-footer */
+#bk-footer
+  background-image: url("img/bk-footer.jpg")
+  background-size: cover
+  height: 800px
+  display: grid
 
+#bk-footer a
+  justify-self: center
+  height: 70px
+  margin-top: 250px
+
+/* Style for footer */
+#contacts-footer
+  background-color: $color1
+  padding: 0 5% 10px 5%
+  display: grid
+
+#contacts-footer p, #contacts-footer i
+  color: $color2
+
+.call i
+  font-size: $font-size-h2
+
+.join i
+  font-size: $font-size-p
+
+.contact-information input
+  height: 40px
+  background: transparent
+  border: 2px solid $color2
+  color: $color2
+  padding: 2px 10px
+  font-family: $font-family1
+  font-size: $font-size-information
+
+input::-webkit-input-placeholder
+  color: $color2
+  opacity: 0.5
+
+.send-button i
+  font-size: $font-size-p
+  margin-left: 10%
+
+.send-button
+  text-decoration: none
+  color: $color2
+  font-family: $font-family1
+  font-size: $font-size-p
+  border: 2px solid $color2
+  padding: 2px 10px
+  width: 120px
+  justify-self: center
+  margin-top: 50px
+
+
+.general-information
+  display: grid
+  grid-template-columns: 3fr 2fr 1fr
+
+.address, .phone, .e-mail
+  display: grid
+  grid-row-gap: 20px
+
+.call
+  display: inline-grid
+  grid-template-columns: 1fr 12fr
+  grid-column-gap: 4%
+  justify-self: center
+  margin-top: 100px
+  margin-left: 15%
+
+.call p
+  align-self: center
+
+.contacts
+  display: grid
+  grid-template-columns: 1fr 1fr
+  margin-top: 100px
+
+.contact-information
+  justify-self: center
+  display: grid
+
+.heading-contacts
+  text-align: center
+
+.blocks
+  display: inline-grid
+  grid-template-columns: 2fr 3fr
+  margin-top: 50px
+  padding-left: 10%
+
+.join
+  justify-self: center
+  display: grid
+
+.heading-join
+  justify-self: center
+
+.join div
+  display: grid
+  grid-template-columns: 1fr 10fr
+  grid-column-gap: 2%
+  margin-top: 30px
+
+.copyright
+  margin-top: 50px
+
+.copyright p
+  font-size: $font-size-information
 
 
 
