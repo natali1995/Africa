@@ -13,6 +13,11 @@ $color2: #fbd850
   margin: 0
   padding: 0
 
+.clearfix:after
+  content: ""
+  display: table
+  clear: both
+
 /* General styles */
 h1
   font-family: $font-family2
@@ -228,80 +233,40 @@ ul li a span:nth-child(4)
   color: $color2
 
 .place1
-  display: grid
-  grid-template-areas: 'img-victoria heading-vicroria' 'img-victoria description-victoria'
-  grid-template-columns: 3fr 2fr
-  grid-column-gap: 3%
-  grid-row-gap: 30px
-  margin-top: 120px
+  margin-top: 150px
+
+.img-place1
+  float: left
+  width: 70%
 
 .place1 img
-  grid-area: img-victoria
-  width: 100%
+  width: 96%
 
 .place1 h2
-  grid-area: heading-vicroria
   text-align: center
+  margin-bottom: 50px
 
 .place1 p
-  grid-area: description-victoria
+  text-align: justify
 
 .place2
-  display: grid
-  grid-template-areas: 'heading-place2 img-place2' 'description-place2 img-place2'
-  grid-template-columns: 2fr 3fr
-  grid-column-gap: 3%
-  grid-row-gap: 30px
   margin-top: 150px
 
-.place2 h2
-  grid-area: heading-place2
-  text-align: center
-
-.place2 p
-  grid-area: description-place2
+.img-place2
+  float: right
+  width: 70%
 
 .place2 img
-  grid-area: img-place2
-  width: 100%
+  width: 96%
+  right: 0
+  margin-left: 5%
 
-.place3
-  display: grid
-  grid-template-areas: 'img-place3 heading-place3' 'img-place3 description-place3'
-  grid-template-columns: 3fr 2fr
-  grid-column-gap: 3%
-  grid-row-gap: 30px
-  margin-top: 150px
+.place2 p
+  text-align: justify
 
-.place3 img
-  grid-area: img-place3
-  width: 100%
-
-.place3 h2
-  grid-area: heading-place3
+.place2 h2
   text-align: center
-
-.place3 p
-  grid-area: description-place3
-
-.place4
-  display: grid
-  grid-template-areas: 'heading-place4 img-place4' 'description-place4 img-place4'
-  grid-template-columns: 2fr 3fr
-  grid-column-gap: 3%
-  grid-row-gap: 30px
-  margin-top: 150px
-
-.place4 h2
-  grid-area: heading-place4
-  text-align: center
-
-.place4 p
-  grid-area: description-place4
-
-.place4 img
-  grid-area: img-place4
-  width: 100%
+  margin-bottom: 50px
 
 /* Style for section animals */
 #animals
@@ -311,20 +276,19 @@ ul li a span:nth-child(4)
 #animals h1
   text-align: center
 
+.img-animals
+  float: right
+  width: 65%
+
 .description-animal
-  display: grid
-  grid-template-areas: 'description-animals img-animals'
-  grid-template-columns: 1fr 2fr
-  grid-column-gap: 1%
   margin-top: 100px
 
-.description-animal p
-  grid-area: description-animals
-  align-self: center
-
 .description-animal img
-  grid-area: img-animals
-  width: 100%
+  width: 96%
+  margin-left: 4%
+
+.description-animal p
+  text-align: justify
 
 .images-animals
   display: grid
@@ -355,36 +319,31 @@ ul li a span:nth-child(4)
   margin-top: 100px
 
 .activity1
-  display: grid
-  grid-template-areas: 'img-activity1 description-activity1'
-  grid-template-columns: 3fr 2fr
-  grid-column-gap: 2%
-  margin-top: 100px
+  margin-top: 50px
+
+.activity1-img
+  float: left
+  width: 60%
 
 .activity1 img
-  grid-area: img-activity1
-  align-self: center
-  width: 100%
+  width: 96%
 
 .activity1 p
-  grid-area: description-activity1
-  align-self: center
+  text-align: justify
 
 .activity2
-  display: grid
-  grid-template-areas: 'description-activity2 img-activity2'
-  grid-template-columns: 2fr 3fr
-  grid-column-gap: 2%
-  margin-top: 100px
+  margin-top: 50px
+
+.activity2-img
+  float: right
+  width: 60%
 
 .activity2 img
-  grid-area: img-activity2
-  align-self: center
-  width: 100%
+  width: 96%
+  margin-left: 5%
 
 .activity2 p
-  grid-area: description-activity2
-  align-self: center
+  text-align: justify
 
 /* Style for section culture */
 #culture
