@@ -261,11 +261,21 @@
 <script type="text/javascript">
     jQuery(function($) {
         $(window).scroll(function(){
-            if($(this).scrollTop()>700){
-                $('#navigation').addClass('fixed');
+            if ($(window).width() > 1366){
+                if($(this).scrollTop()>700){
+                    $('#navigation').addClass('fixed');
+                }
+                else if ($(this).scrollTop()<700){
+                    $('#navigation').removeClass('fixed');
+                }
             }
-            else if ($(this).scrollTop()<700){
-                $('#navigation').removeClass('fixed');
+            if ($(window).width() < 1366){
+                if($(this).scrollTop()>600){
+                    $('#navigation').addClass('fixed');
+                }
+                else if ($(this).scrollTop()<600){
+                    $('#navigation').removeClass('fixed');
+                }
             }
         });
     });
