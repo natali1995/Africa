@@ -63,7 +63,7 @@ p {
   }
 }
 .logo {
-  height: 200%;
+  height: 150%;
 }
 
 /*Style position for header */
@@ -620,7 +620,7 @@ input::-webkit-input-placeholder {
 }
 
 /* Style-adaptive for size 1366px */
-@media all and (max-width: 1366px) {
+@media all and (max-width: 1500px) {
   /* General styles */
   h1 {
     font-size: 40px;
@@ -717,6 +717,218 @@ input::-webkit-input-placeholder {
 
   .join div {
     margin-top: 0;
+  }
+}
+/* Style-adaptive for size 1210px */
+@media all and (max-width: 1210px) {
+  /* General styles */
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  /* Style for section Home */
+  .logo {
+    height: 100%;
+  }
+
+  #navigation.fixed {
+    height: 70px;
+  }
+
+  ul li a {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .fancy-btn {
+    font-size: 35px;
+  }
+
+  .address-header-p1, .address-header-p2, .phone-header-p1, .phone-header-p2, .e-mail-header-p1, .e-mail-header-p2 {
+    font-size: 17px;
+  }
+
+  /* Style for section Places */
+  #places {
+    padding: 70px 10% 70px 10%;
+  }
+
+  .place1 {
+    margin-top: 70px;
+  }
+
+  .place2 {
+    margin-top: 70px;
+  }
+
+  /* Style for section animals */
+  #animals {
+    padding: 70px 10% 70px 10%;
+  }
+
+  /* Style for section Activity */
+  #activity {
+    padding: 70px 10% 70px 10%;
+  }
+
+  .description-activity {
+    margin-top: 50px;
+  }
+
+  #activity h2 {
+    margin-top: 50px;
+  }
+
+  /* Style for section culture */
+  #culture {
+    padding: 70px 5% 70px 5%;
+  }
+
+  .about-culture1 {
+    margin-top: 50px;
+  }
+
+  .description-culture {
+    margin-top: 30px;
+  }
+
+  /*Style for section bk-footer */
+  #bk-footer {
+    height: 500px;
+  }
+
+  #bk-footer a {
+    margin-top: 100px;
+    height: 40px;
+  }
+
+  /* Style for footer */
+  .contact-information input {
+    height: 30px;
+    font-size: 17px;
+  }
+
+  .call i {
+    font-size: 30px;
+  }
+
+  .join i {
+    font-size: 20px;
+  }
+
+  .send-button i {
+    font-size: 20px;
+  }
+
+  .send-button {
+    font-size: 20px;
+    width: 90px;
+    margin-top: 40px;
+  }
+
+  .call {
+    margin-top: 70px;
+  }
+
+  .contacts {
+    margin-top: 70px;
+  }
+
+  .copyright p {
+    font-size: 17px;
+  }
+
+  #navigation.fixed {
+    padding-left: 0;
+  }
+}
+/* Style-adaptive for size 908px */
+@media all and (max-width: 908px) {
+  /* General styles */
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  /* Style for section Home */
+  #navigation.fixed {
+    height: 50px;
+  }
+
+  ul li a {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .fancy-btn {
+    font-size: 30px;
+  }
+
+  .address-header-p1, .address-header-p2, .phone-header-p1, .phone-header-p2, .e-mail-header-p1, .e-mail-header-p2 {
+    font-size: 15px;
+  }
+
+  /* Style for section animals */
+  .description-animal {
+    margin-top: 50px;
+  }
+
+  .images-animals {
+    margin-top: 50px;
+  }
+
+  .about-culture2 {
+    margin-top: 15px;
+  }
+
+  #bk-footer {
+    height: 400px;
+  }
+
+  #bk-footer a {
+    margin-top: 70px;
+  }
+
+  /* Style for footer */
+  .contact-information input {
+    font-size: 15px;
+    height: 24px;
+  }
+
+  .contact-information {
+    justify-self: start;
+  }
+
+  .blocks {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .join {
+    justify-self: end;
+  }
+
+  .join div {
+    margin-top: 0;
+  }
+
+  .copyright p {
+    font-size: 15px;
   }
 }
 

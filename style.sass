@@ -10,6 +10,16 @@ $font-size-p-1366: 24px
 $font-size-h1-1366: 40px
 $font-size-h2-1366: 36px
 
+$font-size-information-1210: 17px
+$font-size-p-1210: 20px
+$font-size-h1-1210: 35px
+$font-size-h2-1210: 30px
+
+$font-size-information-908: 15px
+$font-size-p-908: 17px
+$font-size-h1-908: 30px
+$font-size-h2-908: 25px
+
 $color1: #000000
 $color2: #fbd850
 
@@ -66,7 +76,7 @@ p
     padding-right: 3%
 
 .logo
-  height: 200%
+  height: 150%
 
 /*Style position for header */
 .header
@@ -525,7 +535,7 @@ input::-webkit-input-placeholder
 
 
 /* Style-adaptive for size 1366px */
-@media all and (max-width: 1366px)
+@media all and (max-width: 1500px)
   /* General styles */
   h1
     font-size: $font-size-h1-1366
@@ -601,3 +611,173 @@ input::-webkit-input-placeholder
 
   .join div
     margin-top: 0
+
+
+/* Style-adaptive for size 1210px */
+@media all and (max-width: 1210px)
+  /* General styles */
+  h1
+    font-size: $font-size-h1-1210
+
+  h2
+    font-size: $font-size-h2-1210
+
+  p
+    font-size: $font-size-p-1210
+
+  /* Style for section Home */
+  .logo
+    height: 100%
+
+  #navigation.fixed
+    height: 70px
+
+  ul li a
+    font-size: $font-size-h1-1210
+    line-height: 50px
+
+  .fancy-btn
+    font-size: $font-size-h1-1210
+
+  .address-header-p1, .address-header-p2, .phone-header-p1, .phone-header-p2, .e-mail-header-p1, .e-mail-header-p2
+    font-size: $font-size-information-1210
+
+  /* Style for section Places */
+  #places
+    padding: 70px 10% 70px 10%
+
+  .place1
+    margin-top: 70px
+
+  .place2
+    margin-top: 70px
+
+  /* Style for section animals */
+  #animals
+    padding: 70px 10% 70px 10%
+
+  /* Style for section Activity */
+  #activity
+    padding: 70px 10% 70px 10%
+
+  .description-activity
+    margin-top: 50px
+
+  #activity h2
+    margin-top: 50px
+
+  /* Style for section culture */
+  #culture
+    padding: 70px 5% 70px 5%
+
+  .about-culture1
+    margin-top: 50px
+
+  .description-culture
+    margin-top: 30px
+
+  /*Style for section bk-footer */
+  #bk-footer
+    height: 500px
+
+  #bk-footer a
+    margin-top: 100px
+    height: 40px
+
+  /* Style for footer */
+  .contact-information input
+    height: 30px
+    font-size: $font-size-information-1210
+
+  .call i
+    font-size: $font-size-h2-1210
+
+  .join i
+    font-size: $font-size-p-1210
+
+  .send-button i
+    font-size: $font-size-p-1210
+
+  .send-button
+    font-size: $font-size-p-1210
+    width: 90px
+    margin-top: 40px
+
+  .call
+    margin-top: 70px
+
+  .contacts
+    margin-top: 70px
+
+  .copyright p
+    font-size: $font-size-information-1210
+
+  #navigation.fixed
+    padding-left: 0
+
+
+/* Style-adaptive for size 908px */
+@media all and (max-width: 908px)
+  /* General styles */
+  h1
+    font-size: $font-size-h1-908
+
+  h2
+    font-size: $font-size-h2-908
+
+  p
+    font-size: $font-size-p-908
+
+  /* Style for section Home */
+  #navigation.fixed
+    height: 50px
+
+  ul li a
+    font-size: $font-size-h1-908
+    line-height: 40px
+
+  .fancy-btn
+    font-size: $font-size-h1-908
+
+  .address-header-p1, .address-header-p2, .phone-header-p1, .phone-header-p2, .e-mail-header-p1, .e-mail-header-p2
+    font-size: $font-size-information-908
+
+  /* Style for section animals */
+  .description-animal
+    margin-top: 50px
+
+  .images-animals
+    margin-top: 50px
+
+  .about-culture2
+    margin-top: 15px
+
+  #bk-footer
+    height: 400px
+
+  #bk-footer a
+    margin-top: 70px
+
+  /* Style for footer */
+  .contact-information input
+    font-size: $font-size-information-908
+    height: 24px
+
+  .contact-information
+    justify-self: start
+
+  .blocks
+    padding-left: 0
+    margin-top: 20px
+
+  .join
+    justify-self: end
+
+  .join div
+    margin-top: 0
+
+  .copyright p
+    font-size: $font-size-information-908
+
+
+@media screen and (max-width: 758px)
