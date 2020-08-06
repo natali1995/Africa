@@ -116,7 +116,7 @@ p
   padding-left: 1%
 
 /* menu */
-ul
+#navigation
   transform: translate(0%, 0%)
   padding: 0
   display: inline-grid
@@ -183,6 +183,11 @@ ul li a span:nth-child(4)
   left: 75%
   transition-delay: 0.45s
 
+.hamburger
+  transform: scale(0)
+
+.drawer-list
+  display: none
 
 /* for button */
 .buttons
@@ -780,4 +785,372 @@ input::-webkit-input-placeholder
     font-size: $font-size-information-908
 
 
+/* Adaptive-style for size-mobile */
 @media screen and (max-width: 758px)
+  /* Style for menu-hamburger */
+  #navigation
+    display: none
+
+  .hamburger
+    transform: scale(1)
+
+  .drawer-list
+    display: grid
+
+
+  @mixin transition
+    @for $i from 1 through 50
+      &:nth-child(#{$i})
+        transition: transform 1s #{$i * .08}s cubic-bezier(.29,1.4,.44,.96)
+
+  @mixin alpha-attribute($attribute, $color, $background)
+    $percent: alpha($color) * 100%
+    $opaque: opacify($color, 1)
+    $solid-color: mix($opaque, $background, $percent)
+    #{$attribute}: $solid-color
+    #{$attribute}: $color
+
+  .mobile-menu
+    list-style: none
+    margin: 0
+    padding: 0
+
+  $main: black
+  $text: #f4a460
+  $contrast: darken($main, 10%)
+
+  .drawer-list
+    position: fixed
+    right: 0
+    top: 0
+    height: 100vh
+    width: 100vw
+    transform: translate(100vw, 0)
+    /* ie workaround */
+    -ms-transform: translatex(-100vw)
+    box-sizing: border-box
+    pointer-events: none
+    padding-top: 125px
+    transition: width 475ms ease-out, transform 450ms ease, border-radius .8s .1s ease
+    border-bottom-left-radius: 100vw
+    @include alpha-attribute('background-color', rgba($contrast, 0.8), white)
+    @media (min-width: 768px)
+      width: 40vw
+
+    .mobile-menu
+      height: 100%
+      width: 100%
+      margin: 0
+      padding: 0
+      overflow: auto
+      overflow-x: hidden
+      pointer-events: auto
+
+
+    .mobile-menu li
+      list-style: none
+      pointer-events: auto
+      white-space: nowrap
+      box-sizing: border-box
+      transform: translatex(100vw)
+      /* ie workaround */
+      -ms-transform: translatex(-100vw)
+      &:last-child
+        margin-bottom: 2em
+
+    .mobile-menu a
+      text-decoration: none
+      color: $text
+      text-align: center
+      display: block
+      padding: 1rem
+      font-size: calc(24px - .5vw)
+      @media (min-width: 768px)
+        text-align: right
+        padding: .5rem
+
+        &:hover
+          cursor: pointer
+          @include alpha-attribute('background-color', rgba($main, 0.5), white)
+
+  input.hamburger
+    display: none
+    &:checked
+      & ~ .drawer-list
+        transform: translatex(0)
+        border-bottom-left-radius: 0
+        li
+          transform: translatex(0)
+          @include transition
+          a
+            padding-right: 15px
+
+      & ~ label
+        > i
+          background-color: transparent
+          transform: rotate(90deg)
+          &:before
+            transform: translate(-50%, -50%) rotate(315deg)
+
+          &:after
+            transform: translate(-50%, -50%) rotate(-315deg)
+
+        close
+          color: $text
+          width: 100%
+
+        open
+          color: rgba(0, 0, 0, 0)
+          width: 0
+
+  label.hamburger
+    z-index: 9999
+    position: relative
+    display: block
+    height: 50px
+    width: 50px
+    &:hover
+      cursor: pointer
+
+    text
+      close,
+      open
+        text-transform: uppercase
+        font-size: .8em
+        align-text: center
+        position: absolute
+        transform: translateY(50px)
+        text-align: center
+        overflow: hidden
+        transition: width .25s .35s, color .45s .35s
+
+      close
+        color: rgba(0, 0, 0, 0)
+        right: 0
+        width: 0
+
+      open
+        color: $text
+        width: 100%
+
+    > i
+      position: absolute
+      width: 100%
+      height: 2px
+      top: 50%
+      background-color: $text
+      pointer-events: auto
+      transition-duration: .35s
+      transition-delay: .35s
+      &:before,
+      &:after
+        position: absolute
+        display: block
+        width: 100%
+        height: 2px
+        left: 50%
+        background-color: $text
+        content: ""
+        transition: transform 0.35s
+        transform-origin: 50% 50%
+
+      &:before
+        transform: translate(-50%, -14px)
+
+      &:after
+        transform: translate(-50%, 14px)
+
+  label.hamburger
+    position: fixed
+    top: 15px
+    left: 15px
+
+  .mobile-menu li:hover
+    background-color: $color1
+
+
+  /* Style for information and header */
+  .header
+    grid-template-areas: 'information logo'
+    grid-template-columns: 4fr 1fr
+
+
+  .information
+    grid-area: information
+    justify-self: center
+    grid-template-areas: 'header-email-p1' 'header-email-p2' 'header-phone-p1' 'header-phone-p2'
+    grid-template-rows: repeat(4, 1fr)
+    grid-template-columns: 100%
+    grid-row-gap: 15px
+
+  .address-header-p1, .address-header-p2
+    display: none
+
+  .phone-header-p1, .phone-header-p2, .e-mail-header-p1, .e-mail-header-p2
+    justify-self: end
+
+  .buttons
+    grid-template-columns: 100%
+    grid-template-rows: repeat(2, 1fr)
+    grid-row-gap: 20px
+
+  .fancy-btn
+    justify-self: center
+
+  /* Style for section Places */
+  #places
+    padding: 50px 10% 50px 10%
+
+  .place1
+    margin-top: 70px
+
+  .img-place1
+    float: none
+    width: 100%
+
+  .place1 img
+    width: 100%
+
+  .place1 h2
+    margin-top: 30px
+
+  .place2
+    margin-top: 70px
+
+  .img-place2
+    float: none
+    width: 100%
+
+  .place2 img
+    width: 100%
+    margin-left: 0
+
+  .place2 h2
+    margin-top: 30px
+
+  /* Style for section animals */
+  #animals
+    padding: 50px 10% 50px 10%
+
+  .img-animals
+    float: none
+    width: 100%
+
+  .description-animal img
+    width: 100%
+    margin-left: 0
+
+  .images-animals
+    grid-template-columns: 100%
+
+  /* Style for section Activity */
+  #activity
+    padding: 50px 10% 50px 10%
+
+  .description-activity
+    margin-top: 30px
+
+  #activity h2
+    margin-top: 40px
+
+  .activity1
+    margin-top: 30px
+
+  .activity1-img
+    float: none
+    width: 100%
+
+  .activity1 img
+    width: 100%
+
+  .activity1 p
+    margin-top: 10px
+
+  .activity2
+    margin-top: 30px
+
+  .activity2-img
+    float: none
+    width: 100%
+
+  .activity2 img
+    width: 100%
+    margin-left: 0
+
+  .activity2 p
+    margin-top: 10px
+
+  /* Style for section culture */
+  #culture
+    padding: 50px 10% 50px 10%
+
+  .img-culture
+    width: 100%
+
+  .description-culture
+    width: 100%
+
+  .about-culture1
+    margin-top: 30px
+
+  .img-culture1
+    float: none
+    width: 100%
+    text-align: center
+
+  .about-culture1 img
+    width: 100%
+
+  .img-about-culture2
+    float: none
+    width: 100%
+
+  .about-culture2 img
+    width: 100%
+
+  /*Style for section bk-footer */
+  #bk-footer
+    height: 250px
+
+  #bk-footer a
+    height: 30px
+    margin-top: 40px
+
+  /* Style for footer */
+  .general-information
+    grid-template-columns: 100%
+
+  .address, .phone, .e-mail
+    justify-self: center
+    grid-row-gap: 0
+
+  .address p, .phone p, .e-mail p
+    margin-top: 15px
+    justify-self: center
+
+  .call
+    margin-left: 30%
+
+  .contacts
+    grid-template-columns: 100%
+
+  .contact-information
+    justify-self: center
+
+  .join
+    justify-self: center
+    margin-top: 30px
+
+  .heading-join
+    margin-bottom: 20px
+
+  .join div
+    margin-top: 10px
+
+
+
+
+
+
+
+

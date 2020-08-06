@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>tourAfrica</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Delius+Swash+Caps&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -25,7 +25,7 @@
                 <p class="e-mail-header-p2">info@tourAfrica.com</p>
             </div>
         </div>
-        <div class="overlay"></div>
+
         <ul id="navigation">
             <li><a href="#home">Home
                 <span></span>
@@ -64,6 +64,26 @@
                 <span></span>
             </a></li>
         </ul>
+
+        <input id="hamburger" class="hamburger" type="checkbox"/>
+        <label class="hamburger" for="hamburger">
+            <i></i>
+            <text>
+                <close>close</close>
+                <open>menu</open>
+            </text>
+        </label>
+        <section class="drawer-list">
+            <ul class="mobile-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#animals">Animals</a></li>
+                <li><a href="#activity">Activity</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#contacts-footer">Contacts</a></li>
+            </ul>
+        </section>
+
         <div class="buttons">
             <a class="fancy-btn" href="#contacts-footer">pick up a tour <i class="fas fa-arrow-right"></i></a>
             <a class="fancy-btn button2" href="#contacts-footer">learn more <i class="fas fa-arrow-right"></i></a>
@@ -282,13 +302,5 @@
     });
 
 </script>
-<script>
-    $('.burger, .overlay').click(function() {
-        $('main').toggleClass('open');
-        $('.burger').toggleClass('open');
-        $('.overlay').fadeToggle();
-    });
-</script>
-
 </body>
 </html>

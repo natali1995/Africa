@@ -113,7 +113,7 @@ p {
 }
 
 /* menu */
-ul {
+#navigation {
   transform: translate(0%, 0%);
   padding: 0;
   display: inline-grid;
@@ -191,6 +191,14 @@ ul li a span:nth-child(3) {
 ul li a span:nth-child(4) {
   left: 75%;
   transition-delay: 0.45s;
+}
+
+.hamburger {
+  transform: scale(0);
+}
+
+.drawer-list {
+  display: none;
 }
 
 /* for button */
@@ -929,6 +937,632 @@ input::-webkit-input-placeholder {
 
   .copyright p {
     font-size: 15px;
+  }
+}
+/* Adaptive-style for size-mobile */
+@media screen and (max-width: 758px) {
+  /* Style for menu-hamburger */
+  #navigation {
+    display: none;
+  }
+
+  .hamburger {
+    transform: scale(1);
+  }
+
+  .drawer-list {
+    display: grid;
+  }
+
+  .mobile-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .drawer-list {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    transform: translate(100vw, 0);
+    /* ie workaround */
+    -ms-transform: translatex(-100vw);
+    box-sizing: border-box;
+    pointer-events: none;
+    padding-top: 125px;
+    transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
+    border-bottom-left-radius: 100vw;
+    background-color: #333333;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Style for information and header */
+
+  /* Style for section Places */
+
+  /* Style for section animals */
+
+  /* Style for section Activity */
+
+  /* Style for section culture */
+
+  /*Style for section bk-footer */
+
+  /* Style for footer */
+}
+@media screen and (max-width: 758px) and (min-width: 768px) {
+  .drawer-list {
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 758px) {
+  .drawer-list .mobile-menu {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    pointer-events: auto;
+  }
+}
+@media screen and (max-width: 758px) {
+  .drawer-list .mobile-menu li {
+    list-style: none;
+    pointer-events: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transform: translatex(100vw);
+    /* ie workaround */
+    -ms-transform: translatex(-100vw);
+  }
+  .drawer-list .mobile-menu li:last-child {
+    margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 758px) {
+  .drawer-list .mobile-menu a {
+    text-decoration: none;
+    color: #f4a460;
+    text-align: center;
+    display: block;
+    padding: 1rem;
+    font-size: calc(24px - .5vw);
+  }
+}
+@media screen and (max-width: 758px) and (min-width: 768px) {
+  .drawer-list .mobile-menu a {
+    text-align: right;
+    padding: 0.5rem;
+  }
+  .drawer-list .mobile-menu a:hover {
+    cursor: pointer;
+    background-color: gray;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (max-width: 758px) {
+  input.hamburger {
+    display: none;
+  }
+  input.hamburger:checked ~ .drawer-list {
+    transform: translatex(0);
+    border-bottom-left-radius: 0;
+  }
+  input.hamburger:checked ~ .drawer-list li {
+    transform: translatex(0);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(1) {
+    transition: transform 1s 0.08s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(2) {
+    transition: transform 1s 0.16s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(3) {
+    transition: transform 1s 0.24s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(4) {
+    transition: transform 1s 0.32s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(5) {
+    transition: transform 1s 0.4s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(6) {
+    transition: transform 1s 0.48s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(7) {
+    transition: transform 1s 0.56s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(8) {
+    transition: transform 1s 0.64s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(9) {
+    transition: transform 1s 0.72s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(10) {
+    transition: transform 1s 0.8s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(11) {
+    transition: transform 1s 0.88s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(12) {
+    transition: transform 1s 0.96s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(13) {
+    transition: transform 1s 1.04s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(14) {
+    transition: transform 1s 1.12s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(15) {
+    transition: transform 1s 1.2s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(16) {
+    transition: transform 1s 1.28s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(17) {
+    transition: transform 1s 1.36s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(18) {
+    transition: transform 1s 1.44s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(19) {
+    transition: transform 1s 1.52s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(20) {
+    transition: transform 1s 1.6s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(21) {
+    transition: transform 1s 1.68s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(22) {
+    transition: transform 1s 1.76s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(23) {
+    transition: transform 1s 1.84s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(24) {
+    transition: transform 1s 1.92s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(25) {
+    transition: transform 1s 2s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(26) {
+    transition: transform 1s 2.08s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(27) {
+    transition: transform 1s 2.16s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(28) {
+    transition: transform 1s 2.24s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(29) {
+    transition: transform 1s 2.32s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(30) {
+    transition: transform 1s 2.4s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(31) {
+    transition: transform 1s 2.48s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(32) {
+    transition: transform 1s 2.56s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(33) {
+    transition: transform 1s 2.64s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(34) {
+    transition: transform 1s 2.72s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(35) {
+    transition: transform 1s 2.8s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(36) {
+    transition: transform 1s 2.88s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(37) {
+    transition: transform 1s 2.96s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(38) {
+    transition: transform 1s 3.04s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(39) {
+    transition: transform 1s 3.12s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(40) {
+    transition: transform 1s 3.2s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(41) {
+    transition: transform 1s 3.28s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(42) {
+    transition: transform 1s 3.36s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(43) {
+    transition: transform 1s 3.44s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(44) {
+    transition: transform 1s 3.52s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(45) {
+    transition: transform 1s 3.6s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(46) {
+    transition: transform 1s 3.68s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(47) {
+    transition: transform 1s 3.76s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(48) {
+    transition: transform 1s 3.84s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(49) {
+    transition: transform 1s 3.92s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li:nth-child(50) {
+    transition: transform 1s 4s cubic-bezier(0.29, 1.4, 0.44, 0.96);
+  }
+  input.hamburger:checked ~ .drawer-list li a {
+    padding-right: 15px;
+  }
+  input.hamburger:checked ~ label > i {
+    background-color: transparent;
+    transform: rotate(90deg);
+  }
+  input.hamburger:checked ~ label > i:before {
+    transform: translate(-50%, -50%) rotate(315deg);
+  }
+  input.hamburger:checked ~ label > i:after {
+    transform: translate(-50%, -50%) rotate(-315deg);
+  }
+  input.hamburger:checked ~ label close {
+    color: #f4a460;
+    width: 100%;
+  }
+  input.hamburger:checked ~ label open {
+    color: rgba(0, 0, 0, 0);
+    width: 0;
+  }
+}
+@media screen and (max-width: 758px) {
+  label.hamburger {
+    z-index: 9999;
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+  label.hamburger:hover {
+    cursor: pointer;
+  }
+  label.hamburger text close,
+label.hamburger text open {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    align-text: center;
+    position: absolute;
+    transform: translateY(50px);
+    text-align: center;
+    overflow: hidden;
+    transition: width 0.25s 0.35s, color 0.45s 0.35s;
+  }
+  label.hamburger text close {
+    color: rgba(0, 0, 0, 0);
+    right: 0;
+    width: 0;
+  }
+  label.hamburger text open {
+    color: #f4a460;
+    width: 100%;
+  }
+  label.hamburger > i {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    background-color: #f4a460;
+    pointer-events: auto;
+    transition-duration: 0.35s;
+    transition-delay: 0.35s;
+  }
+  label.hamburger > i:before, label.hamburger > i:after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    left: 50%;
+    background-color: #f4a460;
+    content: "";
+    transition: transform 0.35s;
+    transform-origin: 50% 50%;
+  }
+  label.hamburger > i:before {
+    transform: translate(-50%, -14px);
+  }
+  label.hamburger > i:after {
+    transform: translate(-50%, 14px);
+  }
+}
+@media screen and (max-width: 758px) {
+  label.hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .mobile-menu li:hover {
+    background-color: #000000;
+  }
+}
+@media screen and (max-width: 758px) {
+  .header {
+    grid-template-areas: "information logo";
+    grid-template-columns: 4fr 1fr;
+  }
+}
+@media screen and (max-width: 758px) {
+  .information {
+    grid-area: information;
+    justify-self: center;
+    grid-template-areas: "header-email-p1" "header-email-p2" "header-phone-p1" "header-phone-p2";
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 100%;
+    grid-row-gap: 15px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .address-header-p1, .address-header-p2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 758px) {
+  .phone-header-p1, .phone-header-p2, .e-mail-header-p1, .e-mail-header-p2 {
+    justify-self: end;
+  }
+}
+@media screen and (max-width: 758px) {
+  .buttons {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .fancy-btn {
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 758px) {
+  #places {
+    padding: 50px 10% 50px 10%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .place1 {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .img-place1 {
+    float: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .place1 img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .place1 h2 {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .place2 {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .img-place2 {
+    float: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .place2 img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 758px) {
+  .place2 h2 {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 758px) {
+  #animals {
+    padding: 50px 10% 50px 10%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .img-animals {
+    float: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .description-animal img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 758px) {
+  .images-animals {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  #activity {
+    padding: 50px 10% 50px 10%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .description-activity {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 758px) {
+  #activity h2 {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .activity1 {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .activity1-img {
+    float: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .activity1 img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .activity1 p {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .activity2 {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .activity2-img {
+    float: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .activity2 img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 758px) {
+  .activity2 p {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 758px) {
+  #culture {
+    padding: 50px 10% 50px 10%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .img-culture {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .description-culture {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .about-culture1 {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .img-culture1 {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 758px) {
+  .about-culture1 img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .img-about-culture2 {
+    float: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .about-culture2 img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  #bk-footer {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 758px) {
+  #bk-footer a {
+    height: 30px;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .general-information {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .address, .phone, .e-mail {
+    justify-self: center;
+    grid-row-gap: 0;
+  }
+}
+@media screen and (max-width: 758px) {
+  .address p, .phone p, .e-mail p {
+    margin-top: 15px;
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 758px) {
+  .call {
+    margin-left: 30%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .contacts {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 758px) {
+  .contact-information {
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 758px) {
+  .join {
+    justify-self: center;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .heading-join {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .join div {
+    margin-top: 10px;
   }
 }
 
