@@ -109,7 +109,8 @@ p {
   background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 150px;
-  padding-left: 1%;
+  padding-left: 10%;
+  grid-column-gap: 0;
 }
 
 /* menu */
@@ -853,10 +854,6 @@ input::-webkit-input-placeholder {
   .copyright p {
     font-size: 17px;
   }
-
-  #navigation.fixed {
-    padding-left: 0;
-  }
 }
 /* Style-adaptive for size 908px */
 @media all and (max-width: 908px) {
@@ -1010,6 +1007,7 @@ input::-webkit-input-placeholder {
 }
 @media screen and (max-width: 758px) {
   .drawer-list .mobile-menu li {
+    margin-right: 20%;
     list-style: none;
     pointer-events: auto;
     white-space: nowrap;
@@ -1563,6 +1561,11 @@ label.hamburger text open {
 @media screen and (max-width: 758px) {
   .join div {
     margin-top: 10px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .mobile .buttons {
+    display: none;
   }
 }
 

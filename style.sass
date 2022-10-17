@@ -75,6 +75,7 @@ p
   #navigation.fixed
     padding-right: 3%
 
+
 .logo
   height: 150%
 
@@ -113,7 +114,8 @@ p
   background-color: rgba(255, 255, 255, 0.5)
   width: 100%
   height: 150px
-  padding-left: 1%
+  padding-left: 10%
+  grid-column-gap: 0
 
 /* menu */
 #navigation
@@ -717,10 +719,6 @@ input::-webkit-input-placeholder
   .copyright p
     font-size: $font-size-information-1210
 
-  #navigation.fixed
-    padding-left: 0
-
-
 /* Style-adaptive for size 908px */
 @media all and (max-width: 908px)
   /* General styles */
@@ -848,6 +846,7 @@ input::-webkit-input-placeholder
 
 
     .mobile-menu li
+      margin-right: 20%
       list-style: none
       pointer-events: auto
       white-space: nowrap
@@ -1147,6 +1146,9 @@ input::-webkit-input-placeholder
   .join div
     margin-top: 10px
 
+  .mobile
+    .buttons
+      display: none
 
 
 
